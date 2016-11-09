@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="Restless Realms" default="build" basedir=".">
+	<!-- Configure path to GWT SDK -->
+	<!-- property name="gwt.sdk" location="C:/Users/Kyle/Projects/Libraries/gwt-trunk/build/staging/gwt-windows-0.0.0" / -->
+	<property name="gwt.sdk" location="C:/Program Files (x86)/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.2.0.4_2.0.4.v201006301309/gwt-2.0.4" />
+	<!-- <property name="gwt.sdk" location="C:/Users/Kyle/Projects/Libraries/gwt-windows-0.0.0" /> -->
+	<!-- <property name="gwt.sdk" location="C:/Users/Kyle/Projects/Libraries/gwt-windows-1.7.0" /> -->
+
+	<path id="server.class.path">
+		<pathelement location="war/WEB-INF/classes" />
+		<pathelement location="${gwt.sdk}/gwt-user.jar" />
+		<fileset dir="war/WEB-INF/lib" includes="**/*.jar" />
+	</path>
+
+	<path id="client.class.path">
+		<pathelement location="client/src" />
+		<pathelement location="client/classes" />
+		<fileset dir="client/lib" includes="**/*.jar" />
+		<pathelement location="${gwt.sdk}/gwt-user.jar" />
+		<fileset dir="${gwt.sdk}" includes="gwt-dev*.jar" />
+	</path>
+
+	<path id="tools.class.path">
+		<pathelement location="war/WEB-INF/classes" />
+		<fileset dir="war/WEB-INF/lib" includes="**/*.jar" />
+		<pathelement location="test/lib/freemarker.jar" />
+		<pathelement location="test/lib/hibernate-tools.jar" />
+	</path>
+	
+	<taskdef name="hibernatetools" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="tools.class.path" />
+
+	<target name="build" depends="gwtc,war" />
+
+	<target name="javac" description="Compile java source">
+		<mkdir dir="war/WEB-INF/classes" />
+		<javac srcdir="src" includes="**" encoding="utf-8" destdir="war/WEB-INF/classes" source="1.5" target="1.5" nowarn="true" debug="true" debuglevel="lines,vars,source">
+			<classpath refid="server.class.path" />
+		</javac>
+		<copy todir="war/WEB-INF/classes">
+			<fileset dir="src" excludes="**/*.java" />
+		</copy>
+	</target>
+
+	<target name="gwtjavac" description="Compile java source">
+		<mkdir dir="client/classes" />
+		<javac srcdir="client/src" includes="**" encoding="utf-8" destdir="client/classes" source="1.5" target="1.5" nowarn="true" debug="true" debuglevel="lines,vars,source">
+			<classpath refid="client.class.path" />
+		</javac>
+	</target>
+
+	<target name="gwtc" depends="gwtjavac" description="GWT compile to JavaScript">
+		<java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+			<classpath>
+				<path refid="client.class.path" />
+			</classpath>
+			<!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+			<jvmarg value="-Xmx192M" />
+			
+			<!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+			<arg value="-soyc" />
+			<arg value="-compileReport" />
+			<arg value="restless.realms.RestlessRealms" />
+		</java>
+	</target>
+
+	<target name="war" depends="javac" description="Create a war file">
+		<zip destfile="build/RestlessRealms.war" basedir="war">
+		</zip>
+	</target>
+	
+	<target name="schema">
+		<hibernatetools destdir="build">
+			<annotationconfiguration configurationFile="src/restless/realms/server/configuration/hibernate.cfg.xml" />
+			<hbm2ddl
+				export="false"
+				format="true"
+				drop="false"
+				outputfilename="./src/restless/realms/server/configuration/schema.sql"
+			/>
+		</hibernatetools>
+	</target>
+</project>

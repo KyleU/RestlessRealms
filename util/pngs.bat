@@ -1,0 +1,1 @@
+roptipng.exe ..\war\**\*.png

@@ -1,0 +1,143 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+    <defaultCache
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="120"
+        timeToLiveSeconds="120"
+        overflowToDisk="false"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU"
+    />
+
+	<!-- Recent Player/accounts -->
+    <cache name="restless.realms.server.account.RecentAccounts"
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToLiveSeconds="600"
+        overflowToDisk="false"
+        diskPersistent="false"
+    />
+    <cache name="restless.realms.server.player.RecentPlayers"
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToLiveSeconds="600"
+        overflowToDisk="false"
+        diskPersistent="false"
+    />
+    
+    <!-- Hibernate -->
+    <cache name="org.hibernate.cache.StandardQueryCache"
+        maxElementsInMemory="10000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="org.hibernate.cache.UpdateTimestampsCache"
+        maxElementsInMemory="10000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    
+    <!-- Entities -->
+    <cache name="restless.realms.server.chat.ChatMessage"
+        maxElementsInMemory="200"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.session.Session"
+        maxElementsInMemory="3000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.effect.Effect"
+        maxElementsInMemory="30000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.equipment.Equipment"
+        maxElementsInMemory="10000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.equipment.EquipmentBonuses"
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="600"
+        overflowToDisk="false"
+        diskPersistent="false"
+    />
+    <cache name="restless.realms.server.inventory.Inventory.items"
+        maxElementsInMemory="30000"
+        eternal="false"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.item.Item"
+        maxElementsInMemory="1000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.item.Item.effects"
+        maxElementsInMemory="6000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.leaderboard.Leaderboard"
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="600"
+        overflowToDisk="false"
+        diskPersistent="false"
+    />
+    <cache name="restless.realms.server.mob.MobArchetype"
+        maxElementsInMemory="1000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.perk.Perk"
+        maxElementsInMemory="1000"
+        eternal="false"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.perk.Perk.effects"
+        maxElementsInMemory="6000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.perk.Perkset.perks"
+        maxElementsInMemory="30000"
+        eternal="false"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.shop.Shop"
+        maxElementsInMemory="300"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.skill.Skill"
+        maxElementsInMemory="1000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.skill.Skill.effects"
+        maxElementsInMemory="6000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.skill.Skillset.skills"
+        maxElementsInMemory="30000"
+        eternal="false"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.stash.Stash.items"
+        maxElementsInMemory="30000"
+        eternal="false"
+        overflowToDisk="false"
+    />
+    <cache name="restless.realms.server.treasure.TreasureTable"
+        maxElementsInMemory="1000"
+        eternal="true"
+        overflowToDisk="false"
+    />
+</ehcache>

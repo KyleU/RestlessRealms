@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<atmosphere-handlers>
+	<atmosphere-handler context-root="/messaging/update" class-name="org.atmosphere.handler.ReflectorServletProcessor">
+		<property name="servletClass" value="restless.realms.server.messaging.MessagingServlet" />
+	</atmosphere-handler>
+</atmosphere-handlers>

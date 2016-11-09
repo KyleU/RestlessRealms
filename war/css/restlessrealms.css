@@ -1,0 +1,1762 @@
+@charset "utf-8";
+/*
+ * Global Styles
+ */
+ 
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	color:#fff;
+	background: #000 url('../img/interface/bg.jpg') repeat-y center top;
+	position:relative;
+    font-size: 14px;
+}
+
+body, td, select, input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+	vertical-align: top;
+}
+
+pre {
+	font-family: "Courier New", monospace;
+    font-size: 12px;
+}
+
+img {
+	border: 0 none;	
+	padding: 0;
+	margin: 0;
+}
+
+a, a:visited, a:hover, a:active {
+	vertical-align: baseline;
+	outline: none;
+	outline-style:none;
+	outline-width:0;
+}
+
+a {
+	color:#9b0f0f;
+	white-space: nowrap;
+	outline: none;
+}
+
+a:active {
+	outline: none;
+}
+
+input {
+	height:15px;	
+}
+
+input, textarea {
+	font-size:11px;
+	background-color: #000;
+	color: #fff;
+	padding:0px 3px;
+	margin:0 0 0 0;
+	border:1px solid #868686;	
+}
+
+input:active {
+	border: 1px solid #e3e3e3; 
+}
+input:focus {
+	border: 1px solid #e3e3e3; 
+}
+textarea:active {
+	border: 1px solid #e3e3e3; 
+}
+textarea:focus { 
+	border: 1px solid #e3e3e3; 
+}
+
+button {
+	position: relative;
+	border: 0; 
+	height:30px;
+	padding:2px 0 0 0;
+	cursor: pointer;
+	overflow: visible; /* removes extra side padding in IE */
+	background:url(../img/interface/button.png);
+	color:#fff;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	line-height:14px;
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	border: none;
+}
+
+button:active {
+	outline: none;
+}
+
+button[disabled] {
+	cursor: default;
+	color:#333;
+	border:none;
+	text-shadow: none;
+}
+
+button:hover {
+}
+
+.button-header {
+	height:17px;
+	width:69px;
+	background-position: -220px 0px;
+	padding:1px 0 0 0;
+}
+
+.button-small {
+	width:90px;
+	background-position: -130px 0px;
+}
+
+.button-large {
+	width:130px;
+}
+
+.clickable {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.link {
+	color: #fff;
+	text-decoration:none;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.link-active {
+	cursor:default;
+}
+
+h1 {
+	font-size:16px;	
+}
+
+textarea {
+      resize: none;
+}
+
+.data td {
+	white-space: nowrap;
+}
+
+.largetext {
+	font-size: 14px;
+}
+
+.emphasis {
+	font-weight:bold;
+}
+
+/**
+ * Page Styles
+ */
+#bodycontent {
+	position:relative; /* needed for footer positioning*/
+	margin:0 auto;
+	width:760px;
+	height:750px;
+	background-color:#000;
+}
+
+#pageheader {
+	height:75px;
+	margin-left:5px;
+	margin-right:5px;
+	background:url(../img/interface/header-bg.png);
+}
+
+#gamelogo {
+	margin-left:0px;
+}
+
+#gameslogan {
+	position:absolute;
+	top:3px;
+	left:278px;
+}
+
+#splashheaderbutton {
+	position:absolute;
+	top:50px;
+	left:660px;
+}
+
+#splashheaderbutton a {
+	color: #fff;
+}
+
+#splashheaderbutton a:hover {
+	text-decoration: underline;
+}
+
+#pagecontent {
+	padding:5px;
+}
+
+#subnav {
+	height:21px;
+	margin-bottom:5px;	
+}
+
+.error {
+	color:#d2502c;
+}
+
+.toprow {
+	height:330px;
+}
+
+.leftcol {
+	float:left;
+	width:230px;
+	padding:2px;
+	border:1px solid #1a1a1a;
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+}
+
+.centercol {
+	margin:0 auto;
+	width:262px;
+	padding:2px;
+	border:1px solid #1a1a1a;
+	margin-bottom:5px;
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+}
+
+.rightcol {
+	float:right;
+	width:230px;
+	padding:2px;
+	border:1px solid #1a1a1a;
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+}
+
+.leftcol .title, .rightcol .title {
+	background-image: url(../img/interface/small-title-bg.png);
+}
+.centercol .title {
+	background-image: url(../img/interface/gear-title-bg.png);
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.title {
+	height:24px;
+	font-size:11px;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	text-transform:uppercase;
+	background-image: url(../img/interface/top-title-bg.png);
+	background-repeat: no-repeat;
+	padding-top:5px;
+	padding-left:5px;
+	cursor:default;
+	width:100%;
+}
+
+.windowbody {
+}
+
+.windowcontent {
+	padding-left:5px;
+}
+
+.windowfooter {
+}
+
+.bottomrow {
+	display:block;
+	height:250px;
+}
+
+#beltcontainer {
+	cursor:default;
+	background:url(../img/interface/belt-bg.png);
+	height:70px;
+	margin:5px 0px;
+}
+
+#experiencecontainer {
+	margin-bottom:5px;
+}
+
+.tiptext {
+	margin-top:5px;
+	clear:both;
+	text-align:center;
+	color:#999;
+	font-size:12px;
+}
+
+/*
+ * Panel Styles
+ */
+.navleftpanel {
+	width: 200px;
+	height:300px;
+}
+
+.navrightpanel {
+	width: 550px;
+	height:300px;
+}
+
+.navleftpanel .link {
+	background-image: url(../img/interface/navitem-bg.png);
+	height:20px;
+	padding-top:5px;
+	padding-left:4%;
+	border-bottom:1px solid #000;
+	width:96%;
+}
+
+.navleftpanel .link-active {
+	background-image: url(../img/interface/navitem-active-bg.png);
+}
+
+.introduction {
+	background-image: url(../img/adventure/introduction.png);
+}
+
+.adventuretitle {
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+#mainnavigation {
+	position: absolute;
+	top:33px;
+	left:355px;
+	width:400px;
+	height:33px;
+}
+
+.enablesound {
+	position: absolute;
+	top:36px;
+	left:273px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.enablemusic {
+	position: absolute;
+	top:36px;
+	left:307px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#adventures {
+	position: absolute;
+	top:3px;
+	left:280px;
+	font-size: 12px;
+}
+
+.countdown {
+	position: absolute;
+	top:3px;
+	left:364px;
+	font-size: 12px;
+	cursor:default;
+}
+
+#leaderboardlink {
+	position: absolute;
+	top:3px;
+	left:664px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+	font-size: 12px;
+}
+
+.leaderboard {
+	font-size: 14px;
+}
+
+.leaderboard td {
+	color: #d7d7d7;
+	font-size: 14px;
+}
+
+.leaderboard .even {
+	background-color: #0f0f0f;
+}
+
+.purchaselink {
+	position: absolute;
+	top:3px;
+	left:574px;
+	font-size:12px;		
+	text-decoration:underline;
+}
+
+#inboxlink {
+	position: absolute;
+	top: 3px;
+	left: 442px;
+	font-size: 12px;
+	width: 120px;
+	text-align: right;
+	text-decoration:underline;
+}
+
+#mainnavigation td {
+	text-align: center;
+	font-weight: bold;	
+}
+
+#mainnavigation .link {
+	font-size:11px;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	text-transform:uppercase;
+	background: url(../img/interface/nav-buttons.png);
+	padding-top:0px;
+	display:block;
+	padding-top:9px;
+	height:24px;
+	width:94px;
+}
+
+#mainnavigation .link-active {
+	background-position: 0px -33px;
+}
+
+.progress {
+	background-image:url(../img/interface/bars-bg.png);
+	height:14px;
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+	font-size: 12px;
+	
+}
+
+.progress .bar {
+	height:14px;
+	background-image:url(../img/interface/bars.png);
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+}
+
+.dialogcontent {
+	height: 255px;
+	padding:5px;
+	text-align: left;
+	font-size: 14px;	
+}
+
+.dialogbuttons {
+	text-align: left;
+}
+
+.dialogbuttons button {
+	margin-left: 5px;	
+}
+
+.journalentry {
+	padding:0px 5px;
+}
+
+#loading {
+	text-align: center;
+}
+
+#introduction-container {
+}
+
+#console {
+	width:230px;
+	font-size:12px;
+}
+
+#console-container {
+	background-image:url(../img/interface/chat-bg.png);
+}
+ 
+#combatlog {
+	width:230px;
+	font-size:12px;
+}
+
+.maillist {
+}
+
+.maillist .message {
+	padding:0 5px;
+	height: 18px;
+	width: 523px;
+	overflow: hidden;
+	cursor:pointer;
+	cursor:hand;
+}
+
+.messagedelta {
+	float:right;
+	padding-left:10px;
+	color:#ddd;
+}
+
+.messagename {
+	color:#d2502c;
+}
+
+.messagecontent {
+	white-space: pre-wrap;
+}
+
+#feedback {
+	font-size: 12px;
+}
+
+#feedback-container {
+	background-image:url(../img/interface/chat-bg.png);
+}
+
+
+#feedback textarea {
+	width: 213px;
+	height: 120px;
+}
+
+#combatlog-container {
+	background-image:url(../img/interface/chat-bg.png);
+}
+
+#consoleinput {
+	width:168px;
+	margin-top:2px;
+	margin-left:1px;
+}
+
+#consolebutton {
+	cursor: pointer;
+}
+
+.quantity {
+	width:21px;
+	text-align: right;	
+}
+
+.charactername {
+	font-weight: bold;
+}
+
+.skillbuypanel {
+	width:262px;
+	height:249px;
+}
+
+.perkbuypanel {
+	width:262px;
+	height:249px;
+}
+
+.itemshopsellpanel {
+	width:262px;
+	height:249px;
+}
+
+.itemshopbuypanel {
+	width:262px;
+	height:249px;
+}
+
+#combat {
+}
+
+#pcinfo {
+	background-image: url(../img/interface/overview-bg.png);T
+}
+
+.pcinfo {
+	height:225px;
+	width:230px;
+}
+
+.enemypcinfo {
+	height:305px;
+	width:230px;
+	background-color:#ddd;
+}
+
+.pcinfo .level, .enemypcinfo .level {
+	cursor:normal;
+	width: 40px;
+	text-align: center;
+	color: #fff;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+}
+
+.partymember {
+	height:50px;
+	width:230px;
+	background-color: #ddd;
+}
+
+
+
+#pvpintro {
+	background-image: url(../img/combat/pvp-introbg.png);T
+}
+
+#pvpintro .name {
+	width:120px;
+	font-size:14px;
+	text-align: center;
+	cursor: default;
+}
+
+#pvpintro .reward {
+	font-size:20px;
+	cursor: default;
+}
+
+#defenses {
+	background-image: url(../img/interface/defenses-bg.png);
+}
+
+#death {
+	background-image: url(../img/adventure/death-bg.png);
+}
+
+#loot {
+	background-image: url(../img/adventure/loot-bg.png);
+}
+
+#shrine {
+	background-image: url(../img/adventure/shrine-bg.png);
+}
+
+#exit {
+	background-image: url(../img/adventure/exit-bg.png);
+}
+
+#levelup {
+	background-image: url(../img/adventure/levelup-bg.png);
+}
+
+#noadventures {
+	background-image: url(../img/adventure/noadventures-bg.png);
+}
+
+.mobpanel {
+	width: 191px;
+	height: 300px;
+}
+
+.mobpanel .portrait {
+	cursor: pointer;
+}
+
+.mobpanel .name {
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	font-size: 1lpx;
+	text-align: center;
+	text-transform: uppercase;
+	width: 185px;
+	cursor:default;
+}
+
+.totalupkeep {
+	width:198px;
+	text-align: right;
+}
+
+.bodyguardimage {
+	position:absolute;
+	width:93px;
+	height:108px;
+	cursor:pointer;
+}
+
+.bodyguardname {
+	width:93px;
+	text-align: center;
+	font-size:12px;
+}
+
+.bodyguardlevel {
+	width:93px;
+	text-align: center;
+	font-size:12px;
+}
+
+#bestiary {
+	background-image: url(../img/interface/bestiary-bg.png);
+}
+
+#worldmap {
+	color:#000;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#worldmap img {
+	cursor: pointer;
+	cursor: hand;
+}
+
+#achievement .achievementPointTotal {
+	text-align: center;
+	font-weight: bold;
+}
+
+#notifications {
+	position: absolute;
+	top:105px;
+	left:30px;
+	width:700px;
+	margin:auto;
+}
+
+.notification {
+	color: #fff;
+	background-image:  url("../img/interface/diagonals.png");
+}
+
+.notification .earned {
+	font-weight:bold;
+	color:#ffe60f;
+}
+
+.breminmap {
+	background-image:  url("../img/worldmap/bremin.png");
+}
+
+.kizmekmap {
+	background-image: url("../img/worldmap/kizmek.png");
+}
+
+.maplink {
+	height:36px;
+	width:153px;
+	cursor: pointer;
+	cursor: hand;
+}
+	
+.othermap {
+	height:56px;
+	width:153px;
+}
+
+.adventure-blackwoods {
+	background: transparent url(../img/adventure/blackwoods.png) no-repeat top right;
+}
+
+.adventure-castle {
+	background: transparent url(../img/adventure/castle.png) no-repeat top right;
+}
+
+.adventure-cellar {
+	background: transparent url(../img/adventure/cellar.png) no-repeat top right;
+}
+
+.adventure-dreamcavern {
+	background: transparent url(../img/adventure/dreamcavern.png) no-repeat top right;
+}
+
+.adventure-sanctuary {
+	background: transparent url(../img/adventure/sanctuary.png) no-repeat top right;
+}
+
+.adventure-toggs {
+	background: transparent url(../img/adventure/toggs.png) no-repeat top right;
+}
+
+.adventure-tower {
+	background: transparent url(../img/adventure/tower.png) no-repeat top right;
+}
+
+.adventure-tutorial {
+	background: transparent url(../img/adventure/tutorial-bg.png) no-repeat top right;
+}
+
+.adventure-wastelands {
+	background: transparent url(../img/adventure/wastelands.png) no-repeat top right;
+}
+
+
+#city {
+	background: transparent url(../img/adventure/city-bg.png);
+}
+
+.intro-blackwoods {
+	background: transparent url(../img/adventure/blackwoods.png) no-repeat top right;
+}
+
+.intro-castle {
+	background: transparent url(../img/adventure/castle.png) no-repeat top right;
+}
+
+.intro-cellar {
+	background: transparent url(../img/adventure/cellar.png) no-repeat top right;
+}
+
+.intro-city {
+	background: transparent url(../img/adventure/city.png) no-repeat top right;
+}
+
+.intro-dreamcavern {
+	background: transparent url(../img/adventure/dreamcavern.png) no-repeat top right;
+}
+
+.intro-sanctuary {
+	background: transparent url(../img/adventure/sanctuary.png) no-repeat top right;
+}
+
+.intro-toggs {
+	background: transparent url(../img/adventure/toggs.png) no-repeat top right;
+}
+
+.intro-tower {
+	background: transparent url(../img/adventure/tower.png) no-repeat top right;
+}
+
+.intro-tutorial {
+	background: transparent url(../img/adventure/tutorial.png) no-repeat top right;
+}
+
+.intro-wastelands {
+	background: transparent url(../img/adventure/wastelands.png) no-repeat top right;
+}
+
+/**
+ * Adventure Styles
+ */
+.adventuremap {
+	cursor:default;
+} 
+ 
+.abandonbutton {
+	margin: 15px 0px 0px 55px;
+}
+ 
+.compass {
+	margin: 45px 0px 0px 52px;
+	height:100px;
+	width:100px;
+}
+
+.compass .direction {
+	
+}
+
+.compass .direction-avail {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.room {
+	width:20px;
+	height:20px;
+	cursor:default;
+}
+
+.room-neighbor {
+	cursor:pointer;
+}
+
+.headstone {
+	width:145px;
+	color:#333;
+	text-align:center;
+	font-size:14px;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+	text-transform: uppercase;
+}
+
+/**
+ * Belt Styles
+ */
+.beltstats {
+	width:110px;
+	text-align:center;
+	text-transform:uppercase;
+	font-size: 14px;
+	height:20px;
+	padding: 17px 0 23px 0;
+}
+
+.beltstats div {
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+}
+
+#currencyPanel {
+	padding-left: 60px;	
+}
+
+#tokensPanel {
+	padding-right: 60px;	
+}
+
+#currency, #tokens {
+	font-size: 20px;
+}
+
+.quickslot {
+	height:45px;
+	width:45px;
+	background-color: #000;
+}
+
+.quickslot {
+	cursor: pointer;	
+}
+
+#quickslot0, #quickslot1, #quickslot2, #quickslot3, #quickslot4, #quickslot5, #quickslot6, #quickslot7 {
+	cursor: pointer;	
+}
+
+.quickslot .overlay {
+	cursor: normal;	
+	text-align:right;
+	width:39px;
+	height:15px;
+	padding-top:26px;
+	padding-right:2px;
+	background-image: url(../img/icon/items.png);
+	background-position: -92px -2px;
+	background-repeat: no-repeat;
+}
+
+.quickslot .hover {
+	cursor: normal;	
+	width:45px;
+	height:45px;
+	background-image: url(../img/icon/items.png);
+	background-position: -135px -0px;
+}
+
+.bankitem {
+	float:left;
+	margin-bottom:5px;
+	margin-left:5px;
+}
+/**
+ * Action Styles
+ */
+.actionlist {
+	background-image: url(../img/interface/actionpanel.png);
+} 
+ 
+.actionpanel {
+	height: 51px;
+	width: 243px;
+	background-color: transparent;
+	background-image: url(../img/interface/actionpanel.png);
+}
+
+.sell, .buy {
+	cursor:pointer;
+	cursor:hand;
+}
+
+.actionsummary {
+	color: #797979;
+}
+
+.achievementpanel {
+	height: 51px;
+	width: 213px;
+	background-color: transparent;
+	background-image: url(../img/interface/actionpanel.png);
+}
+
+.playerlink {
+	cursor:pointer;
+	cursor:hand;
+}
+
+.playerlink:hover {
+	text-decoration: underline;
+}
+
+.itemlink {
+	cursor:pointer;
+	cursor:hand;
+	font-weight: bold;
+}
+
+.itemlink:hover {
+	text-decoration: underline;
+}
+
+.iteminfo {
+	border:1px solid #444;
+	padding:3px;
+}
+
+.iteminfo img {
+	margin-right:5px;
+}
+
+/**
+ * Effect Styles
+ */
+.effect {
+	font-size: 30px;
+	width:100px;
+	text-align: center;
+}
+
+#player .effect {
+	position:absolute;
+	top:90px;
+	left:60px;
+}
+
+.partymember .effect {
+	position:absolute;
+	top:90px;
+	left:50px;
+}
+
+.mobpanel .effect {
+	position:absolute;
+	top:90px;
+	left:50px;
+}
+
+.hire {
+	width: 210px;
+	text-align: center;
+}
+
+/**
+ * Damage types
+ */
+.physical {
+	color: #fa0000;
+}
+
+.electric {
+	color: #ffc81f;
+}
+
+.fire {
+	color: #f57400;
+}
+
+.ice {
+	color: #00c6ff;
+}
+
+.healing {
+	color: #4778d2;
+}
+
+.drain {
+	color: #71ac00;	
+}
+
+.replenish {
+	color: #4778d2;
+}
+
+.death {
+	color: #fff;
+}
+
+.stun {
+	color: #00ac5d;
+}
+
+/**
+ * Item Rarities
+ */
+.normal {
+	color: #fff;
+}
+.magic {
+	color: #33ca42;
+}
+.rare {
+	color: #00c6ff;
+}
+.unique {
+	color: #a586bd;
+}
+.legendary {
+	color: #d17400;
+}
+
+/**
+ * Quest
+ */
+ .questlistpanel {
+	width:190px;
+	height:300px;
+}
+
+.questlistpanel .link {
+	color: #fff;
+	background-image: url(../img/interface/navitem-bg.png);
+	height:20px;
+	padding-top:5px;
+	padding-left:5px;
+	border-bottom:1px solid #000;
+	width:168px;
+	text-decoration:none;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.questlistpanel .link-active {
+	background-image: url(../img/interface/navitem-active-bg.png);
+	cursor: default;
+}
+
+.questdetail {
+	width:560px;
+	height:300px;
+}
+ 
+.questprogress {
+	color: #fff600;
+	text-align: right;
+	width:300px;
+}
+
+.questname {
+	color: #fff;
+	font-size:18px;
+	padding-top:10px;
+	height:30px;
+	background-color:#1a1a1a;
+	padding-left:10px;
+	width:550px;
+}
+.questtext {
+	width: 270px;
+	height: 245px;
+	padding:5px;
+	color: #b6b1b1;
+	background-color: #131313;
+}
+
+.questdetaillist {
+	width: 275px;
+	height: 255px;
+	padding:5px;
+	color: #b6b1b1;
+	background-color: #131313;
+}
+
+.spacer {
+	height:10px;
+	line-height: 1px;	
+}
+
+/**
+ * Action Detail tooltip
+ */
+.actiondetail {
+	width: 220px;
+	background-color: #000;
+	z-index: 10000;
+	padding: 5px;
+	border: 1px solid #333;
+	-moz-border-radius: 4px/*{cornerRadius}*/; 
+	-webkit-border-radius: 4px/*{cornerRadius}*/;
+}
+
+.actiondetail .name {
+	font-weight: bold;
+}
+
+.actiondetail .warning {
+	color: #555;
+}
+
+.actiondetail .type {
+	color: #cfcfcf;
+}
+
+.actiondetail .summary {
+	color: #fff;
+}
+
+.actiondetail .warmup {
+	color: #757272;
+}
+
+.actiondetail .cooldown {
+	color: #757272;
+}
+
+.actiondetail .cost {
+	color: #5b81b8;
+}
+
+.actiondetail .level {
+	color: #b9b9b9;
+}
+
+.actiondetail .profession {
+	color: #b9b9b9;
+}
+
+/**
+ * Chat Console Styles
+ */
+.channel-global {
+    color: #dcc9a7;   
+}
+
+.channel-party {
+    color: #a84f00;   
+}
+
+.channel-local {
+    color: #c5c5c5;   
+}
+
+.channel-tell {
+    color: #a638a2;   
+}
+
+.channel-region {
+    color: #008e4d;   
+}
+
+.channel-combat {
+    color: #505050;   
+}
+
+.channel-pvp {
+    color: #ab9603;
+}
+
+.channel-npc {
+    color: #90001e;   
+}
+
+.channel-loot {
+    color: #beb700;   
+}
+
+.channel-help {
+    color: #a53f23;   
+}
+
+.channel-error {
+    color: #a53f23;   
+}
+
+.channel-admin {
+    color: #008ebc;   
+}
+
+.channel-debug {
+    color: #cacaca;   
+}
+
+/* playerlink */
+
+.channel-global .playerlink {
+    color: #ffe9c1;   
+}
+
+.channel-party .playerlink {
+    color: #d06200;   
+}
+
+.channel-local .playerlink {
+    color: #f3f3f3;   
+}
+
+.channel-tell .playerlink {
+    color: #d247cd;   
+}
+
+.channel-region .playerlink {
+    color: #00ac5d;   
+}
+
+.channel-combat .playerlink {
+    color: #666666;   
+}
+
+.channel-pvp .playerlink {
+    color: #ffdf05;
+}
+
+.channel-npc .playerlink {
+    color: #ac0024;   
+}
+
+.channel-loot .playerlink {
+    color: #fff600;   
+}
+
+.channel-help .playerlink {
+    color: #d2502c;   
+}
+
+.channel-error .playerlink {
+    color: #d2502c;   
+}
+
+.channel-admin .playerlink {
+    color: #00c0ff;   
+}
+
+.channel-debug .playerlink {
+    color: #fff;   
+}
+
+
+/**
+ * Splash Styles 
+ */
+#signin {
+	background-image: url(../img/splash/welcome-bg.png);
+	width:100%;
+	height:100%;
+}
+
+#signin .titleblock {
+	padding:20px 0px 0px 12px;
+	font-size:36px;
+	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
+}
+
+#signin .container {
+	width:340px;
+}
+
+#signin .textblock {
+	padding:0px 0px 12px 12px;
+	font-size: 16px;
+}
+
+#signin .fbsignin {
+	padding-top:30px;
+	width:400px;
+	text-align: center;
+	margin:auto;
+}
+
+#signin .divider {
+	padding-top:6px;
+	width:400px;
+	text-align: center;
+	margin:auto;
+}
+#signin .rpxiframe {
+	width:400px;
+	height:240px;
+}
+
+#updates {
+	float:left;
+	padding:2px;
+	height:325px;
+	width:503px;
+	border:1px solid #1a1a1a;
+	-moz-border-radius: 2px/*{cornerRadius}*/; 
+	-webkit-border-radius: 2px/*{cornerRadius}*/;
+}
+
+.update h3 {
+	color: #fffbd8;
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 5px;
+}
+.update ul {
+	margin: 0;
+	border: 0;
+}
+
+.update li {
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 5px;
+	font-size: 12px;
+}
+
+.feature {
+	height:157px;
+	margin-bottom:5px;
+}
+
+#feature1 {
+	background-image: url(../img/splash/feature-1.png);
+	width:100%;
+	height:100%;
+}
+
+#feature2 {
+	position:relative;
+	background-image: url(../img/splash/feature-2.png);
+	width:100%;
+	height:100%;
+}
+
+#characters {
+	position:relative;
+	background-image: url(../img/splash/characters-bg.png);
+	height: 100%;
+}
+
+.portrait .name {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width:250px;
+	text-align: center;
+}
+
+.portrait .stats {
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	width:250px;
+	text-align: center;
+}
+
+.portrait img {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+
+#warrior-name {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#warrior-level {
+	position:absolute;
+	top: 16px;
+	left: 0px;
+	font-size: 12px;
+}
+
+#warrior-select {
+	position:absolute;
+	top: 0px;
+	left: 20px;
+}
+
+#warrior-portrait {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#warrior-button {
+	position:absolute;
+	top: 283px;
+	left: 59px;
+}
+
+#warrior-delete {
+	position:absolute;
+	top: 314px;
+	left: 107px;
+	color:#eee; 
+	font-size:12px;
+}
+
+#wizard-name {
+	position:absolute;
+	top: 0px;
+	left: 250px;
+}
+
+#wizard-level {
+	position:absolute;
+	top: 16px;
+	left: 250px;
+	font-size:12px;
+}
+
+#wizard-select {
+	position:absolute;
+	top: 0px;
+	left: 270px;
+}
+
+#wizard-portrait {
+	position:absolute;
+	top: 0px;
+	left: 250px;
+}
+
+#wizard-button {
+	position:absolute;
+	top: 283px;
+	left: 312px;
+}
+
+#wizard-delete {
+	position:absolute;
+	top: 314px;
+	left: 358px;
+	color:#eee; 
+	font-size:12px;
+}
+
+#cleric-name {
+	position:absolute;
+	top: 0px;
+	left: 500px;
+}
+
+#cleric-level {
+	position:absolute;
+	top: 16px;
+	left: 500px;
+	font-size: 12px;
+}
+
+#cleric-select {
+	position:absolute;
+	top: 0px;
+	left: 520px;
+}
+
+#cleric-portrait {
+	position:absolute;
+	top: 0px;
+	left: 500px;
+}
+
+#cleric-button {
+	position:absolute;
+	top: 283px;
+	left: 560px;
+}
+
+#cleric-delete {
+	position:absolute;
+	top: 314px;
+	left: 607px;
+	color:#eee; 
+	font-size:12px;
+}
+
+#create {
+	position:relative;
+	height: 100%;
+}
+
+.create-warrior {
+	background-image: url(../img/splash/warrior-bg.png);
+}	
+
+.create-wizard {
+	background-image: url(../img/splash/wizard-bg.png);
+}	
+
+.create-cleric {
+	background-image: url(../img/splash/cleric-bg.png);
+}	
+
+.gendericon {
+	background-image: url(../img/splash/gender-buttons.png);
+	width: 29px;
+	height: 29px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#create #name {
+	position:absolute;
+	top: 275px;
+	left: 235px;
+	width: 200px;
+	font-size: 18px;
+	height: 22px;
+	padding: 2px 4px;
+}
+
+#create #male {
+	position:absolute;
+	top: 275px;
+	left: 455px;
+	background-position: 0px -30px;
+}
+
+#create #female {
+	position:absolute;
+	top: 275px;
+	left: 490px;
+	background-position: -30px 0px;
+}
+
+#create #createbutton {
+	position:absolute;
+	top: 275px;
+	left: 530px;
+}
+
+#create #cancelbutton {
+	position:absolute;
+	top: 275px;
+	left: 630px;
+}
+
+/**
+ * GWT Styles
+ */
+.gwt-Button {
+  margin: 0px;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-size: small;
+  cursor: pointer;
+  cursor: hand;
+  border: 1px outset #ccc;
+  outline: none;
+}
+.gwt-Button:active {
+  border: 1px inset #ccc;
+}
+.gwt-Button:hover {
+  border-color: #9cf #69e #69e #7af;
+}
+.gwt-Button[disabled] {
+  cursor: default;
+  color: #888;
+}
+.gwt-Button[disabled]:hover {
+  border: 1px outset #ccc;
+}
+
+.gwt-CheckBox {
+}
+.gwt-CheckBox-disabled {
+  color: #888;
+}
+
+.gwt-FileUpload {
+}
+
+.gwt-Frame {
+}
+
+.gwt-HTML {
+}
+
+.gwt-Hyperlink {
+}
+
+.gwt-Image {
+}
+
+.gwt-Label {
+}
+
+.gwt-ListBox {
+}
+
+.gwt-PasswordTextBox {
+  padding: 2px;
+}
+.gwt-PasswordTextBox-readonly {
+  color: #888;
+}
+
+.gwt-PushButton-up,
+.gwt-PushButton-up-hovering,
+.gwt-PushButton-up-disabled,
+.gwt-PushButton-down,
+.gwt-PushButton-down-hovering,
+.gwt-PushButton-down-disabled {
+  margin: 0;
+  outline:none;
+  text-decoration: none;
+}
+.gwt-PushButton-up,
+.gwt-PushButton-up-hovering,
+.gwt-PushButton-up-disabled {
+  padding: 1px 3px 1px 3px;
+}
+.gwt-PushButton-up {
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-up-hovering {
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-up-disabled {
+  cursor: default;
+  opacity: .5;
+  filter: alpha(opacity=40);
+  zoom: 1;
+}
+.gwt-PushButton-down,
+.gwt-PushButton-down-hovering,
+.gwt-PushButton-down-disabled {
+  padding: 2px 2px 0px 4px;
+}
+.gwt-PushButton-down {
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-down-hovering {
+  cursor: pointer;
+  cursor: hand;
+}
+.gwt-PushButton-down-disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: alpha(opacity=40);
+  zoom: 1;
+}
+
+.gwt-RadioButton {
+}
+.gwt-RadioButton-disabled {
+  color: #888;
+}
+
+.gwt-TextArea {
+  padding: 2px;
+}
+.gwt-TextArea-readonly {
+  color: #888;
+}
+
+.gwt-TextBox {
+  padding: 2px;
+}
+.gwt-TextBox-readonly {
+  color: #888;
+}

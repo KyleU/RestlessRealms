@@ -1,0 +1,121 @@
+Gambit conditions for Allies:
+Ally:  Any						Ally:  Status = KO
+Ally:  party leader				Ally:  Status = Stone
+Ally:  Vaan						Ally:  Status = Petrify
+Ally:  Ashe						Ally:  Status = Stop
+Ally:  Fran						Ally:  Status = Sleep
+Ally:  Balthier					Ally:  Status = Confuse
+Ally:  Basch					Ally:  Status = Doom
+Ally:  Penelo					Ally:  Status = Blind
+Ally:  Lowest HP				Ally:  Status = Poison
+Ally:  Strongest Weapon			Ally:  Status = Silence
+Ally:  Lowest Defense			Ally:  Status = Sap
+Ally:  Lowest Magik resist		Ally:  Status = Oil	
+Ally:  HP < 100%				Ally:  Status = Reverse
+Ally:  HP < 90%					Ally:  Status = Disable
+Ally:  HP < 80%					Ally:  Status = Immobilize
+Ally:  HP < 70%					Ally:  Status = Slow
+Ally:  HP < 60%					Ally:  Status = Disease
+Ally:  HP < 50%					Ally:  Status = Lure
+Ally:  HP < 40%					Ally:  Status = Protect
+Ally:  HP < 30%					Ally:  Status = Shell
+Ally:  HP < 20%					Ally:  Status = Haste
+Ally:  HP < 10%					Ally:  Status = Bravery
+Ally:  MP < 100%				Ally:  Status = Faith
+Ally:  MP < 90%					Ally:  Status = Reflect
+Ally:  MP < 80%					Ally:  Status = Invisible
+Ally:  MP < 70%					Ally:  Status = Regen
+Ally:  MP < 60%					Ally:  Status = Float
+Ally:  MP < 50%					Ally:  Status = Berserk
+Ally:  MP < 40%					Ally:  Status = Bubble
+Ally:  MP < 30%					Ally:  Status = HP Critical
+Ally:  MP < 20%					Ally:  item AMT >= 10
+Ally:  MP < 10%
+
+Gambit conditions for Foes:
+Foe:  Party leader's target		Foe:  Status = Petrify
+Foe:  Nearest visible			Foe:  Status = Stop
+Foe:  Any						Foe:  Status = Sleep
+Foe:  Targeting leader			Foe:  Status = Confuse
+Foe:  Targeting self			Foe:  Status = Doom
+Foe:  Targeting ally			Foe:  Status = Blind
+Foe:  Furthest					Foe:  Status = Poison
+Foe:  Nearest					Foe:  Status = Silence
+Foe:  Highest HP				Foe:  Status = Sap
+Foe:  Lowest HP					Foe:  Status = Oil
+Foe:  Highest Max HP			Foe:  Status = Reverse
+Foe:  Lowest Max HP				Foe:  Status = Disable
+Foe:  Highest MP				Foe:  Status = Immobilize
+Foe:  Lowest MP					Foe:  Status = Slow
+Foe:  Highest Max MP			Foe:  Status = Disease
+Foe:  Lowest Max MP				Foe:  Status = Protect
+Foe:  Highest level				Foe:  Status = Shell
+Foe:  Lowest level				Foe:  Status = Haste
+Foe:  Highest strength			Foe:  Status = Bravery
+Foe:  Lowest strength			Foe:  Status = Faith
+Foe:  Highest magik power		Foe:  Status = Reflect
+Foe:  Lowest magik power		Foe:  Status = Regen
+Foe:  Highest speed				Foe:  Status = Berserk
+Foe:  Lowest speed				Foe:  Status = HP Critical
+Foe:  Highest defense			Foe:  Undead
+Foe:  Highest magik resist		Foe:  Flying
+Foe:  HP >= 100,000				Foe:  Character HP = 100%
+Foe:  HP >= 50,000				Foe:  Item AMT >= 10
+Foe:  HP >= 10,000				Foe:  Character status = Blind
+Foe:  HP >= 5,000				Foe:  Character status = Silence
+Foe:  HP >= 3,000				Foe:  Character status = Bravery
+Foe:  HP >= 2,000				Foe:  Character status = Faith
+Foe:  HP >= 1,000				Foe:  Character status = HP Critical
+Foe:  HP >= 500					Foe:  Character MP >= 90%
+Foe:  HP < 100,000				Foe:  Character MP >= 70%
+Foe:  HP < 50,000				Foe:  Character MP >= 50%
+Foe:  HP < 10,000				Foe:  Character MP >= 30%
+Foe:  HP < 5,000				Foe:  Character MP >= 10%
+Foe:  HP < 3,000				Foe:  Character MP < 90%
+Foe:  HP < 2,000				Foe:  Character MP < 70%
+Foe:  HP < 1,000				Foe:  Character MP < 50%
+Foe:  HP < 500					Foe:  Character MP < 30%
+Foe:  HP = 100%					Foe:  Character MP < 10%
+Foe:  HP >= 70%					Foe:  Character HP >= 90%
+Foe:  HP >= 50%					Foe:  Character HP >= 70%
+Foe:  HP >= 30%					Foe:  Character HP >= 50%
+Foe:  Fire-weak					Foe:  Character HP >= 30%
+Foe:  Lightning-weak			Foe:  Character HP >= 10%
+Foe:  Ice-weak					Foe:  Character HP < 90%
+Foe:  Earth-weak				Foe:  Character HP < 70%
+Foe:  Water-weak				Foe:  Character HP < 50%
+Foe:  Wind-weak					Foe:  Character HP < 30%
+Foe:  Holy-weak					Foe:  Character HP < 10%
+Foe:  Dark-weak
+Foe:  Fire-vulnerable
+Foe:  Lightning-vulnerable
+Foe:  Ice-vulnerable
+Foe:  Earth-vulnerable
+Foe:  Water-vulnerable
+Foe:  Wind-vulnerable
+Foe:  Holy-vulnerable
+Foe:  Dark-vulnerable
+
+Gambit conditions for Self:
+Self							Self:  Status = Petrify
+Self:  HP < 100%				Self:  Status = Doom
+Self:  HP < 90%					Self:  Status = Blind
+Self:  HP < 80%					Self:  Status = Poison
+Self:  HP < 70%					Self:  Status = Silence	
+Self:  HP < 60%					Self:  Status = Sap
+Self:  HP < 50%					Self:  Status = Oil
+Self:  HP < 40%					Self:  Status = Reverse
+Self:  HP < 30%					Self:  Status = Immobilize
+Self:  HP < 20%					Self:  Status = Slow
+Self:  HP < 10%					Self:  Status = Disease
+Self:  MP < 100%				Self:  Status = Lure	
+Self:  MP < 90%					Self:  Status = Protect
+Self:  MP < 80%					Self:  Status = Shell
+Self:  MP < 70%					Self:  Status = Haste
+Self:  MP < 60%					Self:  Status = Bravery
+Self:  MP < 50%					Self:  Status = Faith
+Self:  MP < 40%					Self:  Status = Reflect
+Self:  MP < 30%					Self:  Status = Regen
+Self:  MP < 20%					Self:  Status = Invisible
+Self:  MP < 10%					Self:  Status = Float
+Self:  Status = HP Critical		Self:  Status = Bubble

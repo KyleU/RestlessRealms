@@ -1,0 +1,4 @@
+<Context>
+	<!-- Atmosphere prereq -->
+	<Loader delegate="true" />
+</Context>

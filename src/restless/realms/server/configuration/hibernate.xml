@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                        http://www.springframework.org/schema/tx 
+                        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="cacheManager" class="net.sf.ehcache.CacheManager" destroy-method="shutdown">
+		<constructor-arg type="java.net.URL" value="classpath:/restless/realms/server/configuration/ehcache.xml"/>
+	</bean>
+	
+	<bean id="cacheProviderCacheManagerInjector" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="restless.realms.server.cache.EhCacheProvider.setCacheManager" />
+		<property name="arguments">
+			<list>
+				<ref bean="cacheManager" />
+			</list>
+		</property>
+	</bean> 
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost/restlessrealms?useUnicode=yes&amp;characterEncoding=UTF-8" />
+        <property name="username" value="restless" />
+        <property name="password" value="omgWTFdragonz!" />
+        <property name="validationQuery" value="select version();" />
+        <property name="testWhileIdle" value="true" />
+        <property name="maxActive" value="10" />
+        <property name="maxIdle" value="10" />
+        <property name="initialSize" value="5" />
+        <property name="maxWait" value="10000" />
+        <property name="minEvictableIdleTimeMillis" value="60000" />
+        <property name="timeBetweenEvictionRunsMillis" value="10000" />
+    </bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation">
+			<value>classpath:/restless/realms/server/configuration/hibernate.cfg.xml</value>
+		</property>
+		<property name="configurationClass">
+			<value>org.hibernate.cfg.AnnotationConfiguration</value>
+		</property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<tx:annotation-driven/>
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+    <bean id="statisticsBean" class="org.hibernate.jmx.StatisticsService">
+        <property name="statisticsEnabled" value="true" />
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+ </beans>

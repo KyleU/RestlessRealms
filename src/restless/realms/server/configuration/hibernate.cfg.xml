@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+    	<property name="hibernate.generate_statistics">true</property>
+    	<property name="hibernate.hbm2ddl.auto">validate</property>
+
+    	<property name="hibernate.cache.provider_class">restless.realms.server.cache.EhCacheProvider</property>
+    	<property name="hibernate.cache.use_second_level_cache">true</property>
+    	<property name="hibernate.cache.use_query_cache">true</property>
+    	
+		<mapping class="restless.realms.server.account.Account" />
+		<mapping class="restless.realms.server.achievement.Achievement" />
+		<mapping class="restless.realms.server.achievement.AchievementSet" />
+		<mapping class="restless.realms.server.adventure.Adventure" />
+		<mapping class="restless.realms.server.adventure.AdventureArchetype" />
+		<mapping class="restless.realms.server.adventure.map.AdventureMap" />
+		<mapping class="restless.realms.server.chat.ChatMessage" />
+		<mapping class="restless.realms.server.combat.Combat" />
+		<mapping class="restless.realms.server.combat.CombatRound" />
+		<mapping class="restless.realms.server.combat.action.CombatAction" />
+		<mapping class="restless.realms.server.combat.pvp.PvpCombat" />
+		<mapping class="restless.realms.server.combat.pvp.PvpDefenses" />
+		<mapping class="restless.realms.server.effect.Effect" />
+		<mapping class="restless.realms.server.encounter.Encounter" />
+		<mapping class="restless.realms.server.encounter.MobChance" />
+		<mapping class="restless.realms.server.equipment.Equipment" />
+		<mapping class="restless.realms.server.item.Item" />
+		<mapping class="restless.realms.server.inventory.Inventory" />
+		<mapping class="restless.realms.server.mail.MailMessage" />
+		<mapping class="restless.realms.server.mob.MobArchetype" />
+		<mapping class="restless.realms.server.mob.Mob" />
+		<mapping class="restless.realms.server.perk.Perk" />
+		<mapping class="restless.realms.server.perk.Perkset" />
+		<mapping class="restless.realms.server.playercharacter.PlayerCharacter" />
+		<mapping class="restless.realms.server.playercharacter.party.Party" />
+		<mapping class="restless.realms.server.playercharacter.statistics.Statistic" />
+		<mapping class="restless.realms.server.profession.Profession" />
+		<mapping class="restless.realms.server.profession.SkillTree" />
+		<mapping class="restless.realms.server.room.Room" />
+		<mapping class="restless.realms.server.quest.Quest" />
+		<mapping class="restless.realms.server.quest.progress.QuestProgress" />
+		<mapping class="restless.realms.server.session.Session" />
+		<mapping class="restless.realms.server.shop.Shop" />
+		<mapping class="restless.realms.server.skill.Skill" />
+		<mapping class="restless.realms.server.skill.Skillset" />
+		<mapping class="restless.realms.server.stash.Stash" />
+		<mapping class="restless.realms.server.tip.Tip" />
+		<mapping class="restless.realms.server.treasure.ItemChance" />
+		<mapping class="restless.realms.server.treasure.TreasureTable" />
+    </session-factory>
+</hibernate-configuration>
